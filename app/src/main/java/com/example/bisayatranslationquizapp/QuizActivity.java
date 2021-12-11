@@ -129,7 +129,6 @@ public class QuizActivity extends AppCompatActivity {
         rb2.setTextColor(textColorDefaultRb);
         rb3.setTextColor(textColorDefaultRb);
         rbGroup.clearCheck();
-
         if (questionCounter < questionCountTotal) {
             currentQuestion = questionList.get(questionCounter);
 
