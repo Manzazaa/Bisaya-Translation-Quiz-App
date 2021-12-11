@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Bisaya Tranlation Quiz"
+        android:text="Bisaya Translation Quiz"
         android:textColor="@android:color/black"
         android:textSize="35sp" />
 
