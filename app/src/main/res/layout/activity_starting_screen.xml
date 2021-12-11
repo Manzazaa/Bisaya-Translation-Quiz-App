@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
+    android:background="@drawable/gradient_color_1"
     android:padding="16dp"
     tools:context="com.example.bisayatranslationquizapp.StartingScreenActivity">
 
@@ -12,10 +12,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="Bisaya Translation Quiz"
-        android:textColor="@android:color/black"
-        android:textSize="30sp" />
+        android:layout_marginTop="50dp"
+        android:text="Translate Me In Bisaya"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/text_view_highscore"
@@ -24,30 +25,45 @@
         android:layout_above="@id/button_start_quiz"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"
+        android:backgroundTintMode="add"
         android:text="Highscore: 0"
-        android:textSize="20sp" />
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/button_start_quiz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
         android:layout_centerInParent="true"
-        android:text="Start Quiz" />
+        android:background="@drawable/btn_icon_design"
+        android:shadowColor="#fff"
+        android:text="Get Started"
+        android:textSize="23dp"
+        android:textStyle="bold" />
 
     <Spinner
         android:id="@+id/spinner_category"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/button_start_quiz"
         android:layout_below="@+id/button_start_quiz"
-        android:layout_marginTop="16dp" />
+        android:layout_alignStart="@+id/button_start_quiz"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="21dp"
+        android:layout_gravity="center"
+        />
 
     <Spinner
         android:id="@+id/spinner_difficulty"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/button_start_quiz"
         android:layout_below="@+id/spinner_category"
-        android:layout_marginTop="16dp" />
+        android:layout_alignStart="@+id/button_start_quiz"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="11dp"
+        android:spinnerMode="dropdown" />
 
 </RelativeLayout>
