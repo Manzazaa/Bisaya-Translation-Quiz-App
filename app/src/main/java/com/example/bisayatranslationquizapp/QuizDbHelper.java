@@ -13,8 +13,8 @@ import java.util.List;
 
 
 public class QuizDbHelper extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "MyAwesomeQuiz.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final String DATABASE_NAME = "QuizDatabase.db";
+    private static final int DATABASE_VERSION = 2;
 
     private static QuizDbHelper instance;
 
@@ -75,12 +75,10 @@ public class QuizDbHelper extends SQLiteOpenHelper {
     }
 
     private void fillCategoriesTable() {
-        Category c1 = new Category("Programming");
+        Category c1 = new Category("English to Bisaya");
         insertCategory(c1);
-        Category c2 = new Category("Geography");
+        Category c2 = new Category("Bisaya to English");
         insertCategory(c2);
-        Category c3 = new Category("Math");
-        insertCategory(c3);
     }
 
     public void addCategory(Category category) {
@@ -103,30 +101,59 @@ public class QuizDbHelper extends SQLiteOpenHelper {
     }
 
     private void fillQuestionsTable() {
-        Question q1 = new Question("Programming, Easy: A is correct",
-                "A", "B", "C", 1,
-                Question.DIFFICULTY_EASY, Category.PROGRAMMING);
+        //BIS TO ENG EASY
+
+        Question q1 = new Question("Iring",
+                "Cat", "Dog", "Spinosaurus", 1,
+                Question.DIFFICULTY_EASY, Category.BISTOENG);
         insertQuestion(q1);
-        Question q2 = new Question("Geography, Medium: B is correct",
-                "A", "B", "C", 2,
-                Question.DIFFICULTY_MEDIUM, Category.GEOGRAPHY);
+
+        Question q2 = new Question("Iro",
+                "Snoop", "Dog", "Pterodactyl", 2,
+                Question.DIFFICULTY_EASY, Category.BISTOENG);
         insertQuestion(q2);
-        Question q3 = new Question("Math, Hard: C is correct",
-                "A", "B", "C", 3,
-                Question.DIFFICULTY_HARD, Category.MATH);
+
+        Question q3 = new Question("Dahom",
+                "Nightmares", "Water", "Dream", 3,
+                Question.DIFFICULTY_EASY, Category.BISTOENG);
         insertQuestion(q3);
-        Question q4 = new Question("Math, Easy: A is correct",
-                "A", "B", "C", 1,
-                Question.DIFFICULTY_EASY, Category.MATH);
+
+        Question q4 = new Question("Liog",
+                "Neck", "Deep", "Leg", 1,
+                Question.DIFFICULTY_EASY, Category.BISTOENG);
         insertQuestion(q4);
-        Question q5 = new Question("Non existing, Easy: A is correct",
-                "A", "B", "C", 1,
-                Question.DIFFICULTY_EASY, 4);
+
+        Question q5 = new Question("Lami",
+                "Epic", "Unsavory", "Delicious", 3,
+                Question.DIFFICULTY_EASY, Category.BISTOENG);
         insertQuestion(q5);
-        Question q6 = new Question("Non existing, Medium: B is correct",
-                "A", "B", "C", 2,
-                Question.DIFFICULTY_MEDIUM, 5);
+
+        //ENG TO BIS EASY
+        Question q6 = new Question("Nice",
+                "Ayus", "Waag nawong oy", "Wala", 1,
+                Question.DIFFICULTY_EASY, Category.ENGTOBIS);
         insertQuestion(q6);
+
+        Question q7 = new Question("Love",
+                "Lami", "Buang", "Gugma", 3,
+                Question.DIFFICULTY_EASY, Category.ENGTOBIS);
+        insertQuestion(q7);
+
+        Question q8 = new Question("Sleep",
+                "Tutok", "Tug", "Tugstak", 2,
+                Question.DIFFICULTY_EASY, Category.ENGTOBIS);
+        insertQuestion(q8);
+
+        Question q9 = new Question("Mine",
+                "Imoha", "Akoa", "Atoa", 2,
+                Question.DIFFICULTY_EASY, Category.ENGTOBIS);
+        insertQuestion(q9);
+
+        Question q10 = new Question("Back",
+                "Likod", "Atubangan", "Kilid", 1,
+                Question.DIFFICULTY_EASY, Category.ENGTOBIS);
+        insertQuestion(q10);
+
     }
 
     public void addQuestion(Question question) {
