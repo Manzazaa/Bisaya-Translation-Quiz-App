@@ -14,7 +14,7 @@ import java.util.List;
 
 public class QuizDbHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "QuizDatabase.db";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
 
     private static QuizDbHelper instance;
 
@@ -102,27 +102,22 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
     private void fillQuestionsTable() {
         //BIS TO ENG EASY
-
         Question q1 = new Question("Iring",
                 "Cat", "Dog", "Spinosaurus", 1,
                 Question.DIFFICULTY_EASY, Category.BISTOENG);
         insertQuestion(q1);
-
         Question q2 = new Question("Iro",
                 "Snoop", "Dog", "Pterodactyl", 2,
                 Question.DIFFICULTY_EASY, Category.BISTOENG);
         insertQuestion(q2);
-
         Question q3 = new Question("Dahom",
                 "Nightmares", "Water", "Dream", 3,
                 Question.DIFFICULTY_EASY, Category.BISTOENG);
         insertQuestion(q3);
-
         Question q4 = new Question("Liog",
                 "Neck", "Deep", "Leg", 1,
                 Question.DIFFICULTY_EASY, Category.BISTOENG);
         insertQuestion(q4);
-
         Question q5 = new Question("Lami",
                 "Epic", "Unsavory", "Delicious", 3,
                 Question.DIFFICULTY_EASY, Category.BISTOENG);
@@ -130,29 +125,113 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
         //ENG TO BIS EASY
         Question q6 = new Question("Nice",
-                "Ayus", "Waag nawong oy", "Wala", 1,
+                "Ayus", "Aso", "Wala", 1,
                 Question.DIFFICULTY_EASY, Category.ENGTOBIS);
         insertQuestion(q6);
-
         Question q7 = new Question("Love",
                 "Lami", "Buang", "Gugma", 3,
                 Question.DIFFICULTY_EASY, Category.ENGTOBIS);
         insertQuestion(q7);
-
         Question q8 = new Question("Sleep",
                 "Tutok", "Tug", "Tugstak", 2,
                 Question.DIFFICULTY_EASY, Category.ENGTOBIS);
         insertQuestion(q8);
-
         Question q9 = new Question("Mine",
                 "Imoha", "Akoa", "Atoa", 2,
                 Question.DIFFICULTY_EASY, Category.ENGTOBIS);
         insertQuestion(q9);
-
         Question q10 = new Question("Back",
                 "Likod", "Atubangan", "Kilid", 1,
                 Question.DIFFICULTY_EASY, Category.ENGTOBIS);
         insertQuestion(q10);
+
+        //MEDIUM ENG TO BIS
+        Question q11 = new Question("Sky",
+                "Ayus", "Langit", "Wala", 2,
+                Question.DIFFICULTY_MEDIUM, Category.ENGTOBIS);
+        insertQuestion(q11);
+        Question q12 = new Question("Fourteen",
+                "Kanding", "Katabi", "Katorse", 3,
+                Question.DIFFICULTY_MEDIUM, Category.ENGTOBIS);
+        insertQuestion(q12);
+        Question q13 = new Question("Disturbance",
+                "Pagsamo", "Samok", "Sayaw", 2,
+                Question.DIFFICULTY_MEDIUM, Category.ENGTOBIS);
+        insertQuestion(q13);
+        Question q14 = new Question("Door",
+                "Window", "Purtahan", "Pinto", 2,
+                Question.DIFFICULTY_MEDIUM, Category.ENGTOBIS);
+        insertQuestion(q14);
+        Question q15 = new Question("Demon",
+                "Ikaw", "Yawa", "Nawong", 2,
+                Question.DIFFICULTY_MEDIUM, Category.ENGTOBIS);
+        insertQuestion(q15);
+
+        //MEDIUM BIS TO ENG
+        Question q16 = new Question("Gipasindan-an",
+                "Warned", "Said", "Have", 1,
+                Question.DIFFICULTY_MEDIUM, Category.BISTOENG);
+        insertQuestion(q16);
+        Question q17 = new Question("Bitoon",
+                "Moon", "Star", "Grandma's House", 2,
+                Question.DIFFICULTY_MEDIUM, Category.BISTOENG);
+        insertQuestion(q17);
+        Question q18 = new Question("Paglaom",
+                "Hope", "Despair", "Leverage", 1,
+                Question.DIFFICULTY_MEDIUM, Category.BISTOENG);
+        insertQuestion(q18);
+        Question q19 = new Question("Kahangturan",
+                "Destination", "Forever", "End", 2,
+                Question.DIFFICULTY_MEDIUM, Category.BISTOENG);
+        insertQuestion(q19);
+        Question q20 = new Question("Kanunay",
+                "A little bit of both", "Sometimes", "Always", 3,
+                Question.DIFFICULTY_MEDIUM, Category.BISTOENG);
+        insertQuestion(q20);
+
+        //HARD BIS TO ENG
+        Question q21 = new Question("Asa ka gikan?",
+                "Where did you come from?", "You stole my carpet?", "I'm very nice?", 1,
+                Question.DIFFICULTY_HARD, Category.BISTOENG);
+        insertQuestion(q21);
+        Question q22 = new Question("Naa ko'y balay dire.",
+                "I was the president of the USA.", "I have a house here.", "My dog ate my assignment.", 2,
+                Question.DIFFICULTY_HARD, Category.BISTOENG);
+        insertQuestion(q22);
+        Question q23 = new Question("Nasaag nako!",
+                "I love you!", "I am lost!", "I stole your cat!", 2,
+                Question.DIFFICULTY_HARD, Category.BISTOENG);
+        insertQuestion(q23);
+        Question q24 = new Question("Palihog ko sa akong gamit.",
+                "Give me your money legally.", "Put the milk before the cereal.", "Hand me my things please.", 3,
+                Question.DIFFICULTY_HARD, Category.BISTOENG);
+        insertQuestion(q24);
+        Question q25 = new Question("Giingnan na tika, diba?",
+                "I told you, right?", "The carpet does not fly, right?", "We have the same mother, right?", 1,
+                Question.DIFFICULTY_HARD, Category.BISTOENG);
+        insertQuestion(q25);
+
+        //HARD ENG TO BIS
+        Question q26 = new Question("I am so happy.",
+                "Lipay kaayo ko.", "Gusto nako mahimong ligid.", "Kasaba ba nimo.", 1,
+                Question.DIFFICULTY_HARD, Category.ENGTOBIS);
+        insertQuestion(q26);
+        Question q27 = new Question("It is all because of you.",
+                "Akoa na lang ka bi.", "Tungod ni tanan sa imoha.", "Naunsa na man ko oy.", 2,
+                Question.DIFFICULTY_HARD, Category.ENGTOBIS);
+        insertQuestion(q27);
+        Question q28 = new Question("Ma, meet my girlfriend.",
+                "Ma, ila ilaha akong uyab.", "Ma, ihatag sa akoa imong balay og yuta.", "Ma, wa nako kasabot.", 1,
+                Question.DIFFICULTY_HARD, Category.ENGTOBIS);
+        insertQuestion(q28);
+        Question q29 = new Question("Do not worry.",
+                "Ayaw og kabalaka.", "Padayon sa paglambo.", "Maadto jud kog langit.", 1,
+                Question.DIFFICULTY_HARD, Category.ENGTOBIS);
+        insertQuestion(q29);
+        Question q30 = new Question("I see you.",
+                "Lipaya oy.", "Kita tika.", "Naay bitin.", 2,
+                Question.DIFFICULTY_HARD, Category.ENGTOBIS);
+        insertQuestion(q30);
 
     }
 
