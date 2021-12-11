@@ -34,6 +34,7 @@ public class QuizActivity extends AppCompatActivity {
     private TextView textViewCategory;
     private TextView textViewDifficulty;
     private TextView textViewCountDown;
+    private TextView textViewTotalScore;
     private RadioGroup rbGroup;
     private RadioButton rb1;
     private RadioButton rb2;
@@ -60,7 +61,7 @@ public class QuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-
+        textViewTotalScore = findViewById(R.id.textViewTotalScore);
         textViewQuestion = findViewById(R.id.text_view_question);
         textViewScore = findViewById(R.id.text_view_score);
         textViewQuestionCount = findViewById(R.id.text_view_question_count);
@@ -133,9 +134,9 @@ public class QuizActivity extends AppCompatActivity {
             currentQuestion = questionList.get(questionCounter);
 
             textViewQuestion.setText(currentQuestion.getQuestion());
-            rb1.setText(currentQuestion.getOption1());
-            rb2.setText(currentQuestion.getOption2());
-            rb3.setText(currentQuestion.getOption3());
+            rb1.setText("a. "+currentQuestion.getOption1());
+            rb2.setText("b. "+currentQuestion.getOption2());
+            rb3.setText("c. "+currentQuestion.getOption3());
 
             questionCounter++;
             textViewQuestionCount.setText("Question: " + questionCounter + "/" + questionCountTotal);
@@ -205,21 +206,22 @@ public class QuizActivity extends AppCompatActivity {
         switch (currentQuestion.getAnswerNr()) {
             case 1:
                 rb1.setTextColor(Color.GREEN);
-                textViewQuestion.setText("Correct!");
+                textViewQuestion.setText("The correct answer is a!");
                 break;
             case 2:
                 rb2.setTextColor(Color.GREEN);
-                textViewQuestion.setText("Correct!");
+                textViewQuestion.setText("The correct answer is b!");
                 break;
             case 3:
                 rb3.setTextColor(Color.GREEN);
-                textViewQuestion.setText("Correct!");
+                textViewQuestion.setText("The correct answer is c!");
                 break;
         }
 
         if (questionCounter < questionCountTotal) {
             buttonConfirmNext.setText("Next");
         } else {
+            textViewTotalScore.setText("Final Score: "+ score + "/" + questionCountTotal);
             buttonConfirmNext.setText("Finish");
         }
     }
@@ -228,6 +230,7 @@ public class QuizActivity extends AppCompatActivity {
         Intent resultIntent = new Intent();
         resultIntent.putExtra(EXTRA_SCORE, score);
         setResult(RESULT_OK, resultIntent);
+
         finish();
     }
 
