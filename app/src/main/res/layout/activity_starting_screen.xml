@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/EngsayoLogo"
         android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
         android:text="ENGSAYO"
         android:textColor="@color/black"
         android:textSize="40sp"
