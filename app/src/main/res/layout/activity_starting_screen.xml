@@ -100,7 +100,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text=" Add Translation Here "
+        android:text="Add Translation Here"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="italic" />

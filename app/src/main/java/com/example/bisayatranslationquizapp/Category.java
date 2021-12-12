@@ -3,7 +3,6 @@ package com.example.bisayatranslationquizapp;
 public class Category {
         public static final int ENGTOBIS = 1;
         public static final int BISTOENG = 2;
-        public static final int CUSTOM = 3;
 
         private int id;
         private String name;

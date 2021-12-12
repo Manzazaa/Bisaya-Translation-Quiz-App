@@ -143,4 +143,10 @@ public class Question implements Parcelable {
                 DIFFICULTY_HARD
         };
     }
+
+    public static Integer[] getCorrectAnswer() {
+        return new Integer[]{
+                1, 2, 3
+        };
+    }
 }
