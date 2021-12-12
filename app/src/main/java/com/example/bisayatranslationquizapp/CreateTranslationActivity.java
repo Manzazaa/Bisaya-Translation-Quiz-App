@@ -1,9 +1,11 @@
 package com.example.bisayatranslationquizapp;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -35,21 +37,31 @@ public class CreateTranslationActivity  extends AppCompatActivity {
         editText_option2 = findViewById(R.id.editText_word2);
         editText_option3 = findViewById(R.id.editText_word3);
 
-        button_create = findViewById(R.id.button_create);
-        button_back = findViewById(R.id.button_back);
-
         loadCategories();
         loadDifficultyLevels();
         loadCorrectAnswer();
 
+        button_create = findViewById(R.id.button_create);
+        button_create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                submitEntry();
+            }
+        });
+
+        button_back = findViewById(R.id.button_back);
     }
+
     private void submitEntry(){
         String question = editText_word.getText().toString();
         String option1 = editText_option1.getText().toString();
         String option2 = editText_option2.getText().toString();
         String option3 = editText_option1.getText().toString();
 
-
+        Toast.makeText(CreateTranslationActivity.this, "Word: "+question+"\n"+
+                "Option 1: "+option1+"\n"+
+                "Option 2: "+option2+"\n"+
+                "Option 3: "+option3, Toast.LENGTH_SHORT).show();
     }
 
     private void loadCategories() {
