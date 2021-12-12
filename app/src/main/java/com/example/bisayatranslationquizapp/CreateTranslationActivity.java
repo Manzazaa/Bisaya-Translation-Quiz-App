@@ -50,13 +50,19 @@ public class CreateTranslationActivity  extends AppCompatActivity {
         });
 
         button_back = findViewById(R.id.button_back);
+        button_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void submitEntry() {
         String question = editText_word.getText().toString();
         String option1 = editText_option1.getText().toString();
         String option2 = editText_option2.getText().toString();
-        String option3 = editText_option1.getText().toString();
+        String option3 = editText_option3.getText().toString();
 
         Category selectedCategory = (Category) spinner_create_category.getSelectedItem();
         int categoryID = selectedCategory.getId();
@@ -64,17 +70,12 @@ public class CreateTranslationActivity  extends AppCompatActivity {
         String difficultySelected = spinner_create_difficulty.getSelectedItem().toString();
         int selectedAnswer = Integer.parseInt(spinner_correct_answer.getSelectedItem().toString());
 
-        Toast.makeText(CreateTranslationActivity.this, "Category: " + categoryNameSelected + "\n" +
-
-                "Difficulty: " + difficultySelected + "\n" +
-                "Word: " + question + "\n" +
-                "Option 1: " + option1 + "\n" +
-                "Option 2: " + option2 + "\n" +
-                "Option 3: " + option3 + "\n" +
-                "Answer: " + selectedAnswer, Toast.LENGTH_SHORT).show();
+        Toast.makeText(CreateTranslationActivity.this, "Successfully added to the database.", Toast.LENGTH_SHORT).show();
 
         Question questionSet = new Question(question, option1, option2, option3, selectedAnswer, difficultySelected, categoryID);
         QuizDbHelper.getInstance(this).addQuestion(questionSet);
+
+        finish();
     }
     private void loadCategories() {
         QuizDbHelper dbHelper = QuizDbHelper.getInstance(this);
