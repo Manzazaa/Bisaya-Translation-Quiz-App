@@ -150,7 +150,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="530dp"
+        android:layout_marginTop="520dp"
         android:background="@drawable/btn_icon_design"
         android:text="Create" />
 
@@ -160,7 +160,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/button_create"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/btn_icon_design"
         android:text="Back" />
 
