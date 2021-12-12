@@ -15,8 +15,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="38dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="34dp"
         android:text="Create a Translation"
         android:textColor="@color/black"
         android:textSize="25sp"
@@ -29,32 +30,21 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="119dp"
+        android:layout_marginTop="90dp"
         android:text="Category"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="247dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/spinner_create_category"
+        android:layout_width="244dp"
+        android:layout_height="28dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="161dp"
-        android:minHeight="48dp" />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="245dp"
-        android:layout_height="48dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="289dp"
+        android:layout_marginTop="120dp"
         android:minHeight="48dp" />
 
     <TextView
@@ -65,21 +55,60 @@
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="170dp"
         android:text="Difficulty"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
 
+    <Spinner
+        android:id="@+id/spinner_create_difficulty"
+        android:layout_width="245dp"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="200dp"
+        android:minHeight="48dp" />
+
     <TextView
-        android:id="@+id/textView_Word1"
+        android:id="@+id/textView_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="362dp"
-        android:text="Word"
+        android:layout_marginTop="250dp"
+        android:text="Word to be translated"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText_question"
+        android:layout_width="252dp"
+        android:layout_height="34dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginBottom="390dp"
+        android:ems="10"
+        android:hint="To be translated"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView_answers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="330dp"
+        android:text="Translations"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -87,39 +116,66 @@
     <EditText
         android:id="@+id/editText_word1"
         android:layout_width="250dp"
-        android:layout_height="wrap_content"
+        android:layout_height="34dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="50dp"
-        android:layout_marginBottom="262dp"
+        android:layout_marginBottom="300dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Word to be translated" />
-
-    <TextView
-        android:id="@+id/textView_Word2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="462dp"
-        android:text="Translation"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:hint="Option 1"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/editText_word2"
         android:layout_width="250dp"
-        android:layout_height="wrap_content"
+        android:layout_height="34dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="50dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginBottom="270dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Translates to..." />
+        android:hint="Option 2"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText_word3"
+        android:layout_width="250dp"
+        android:layout_height="34dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="240dp"
+        android:ems="10"
+        android:hint="Option 3"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView_correct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="480dp"
+        android:text="Correct Answer Option"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner_correct"
+        android:layout_width="244dp"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="500dp"
+        android:minHeight="48dp" />
 
     <Button
         android:id="@+id/button_create"
@@ -129,7 +185,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="50dp"
-        android:layout_marginBottom="104dp"
+        android:layout_marginBottom="64dp"
         android:text="Create" />
 
     <Button
@@ -139,8 +195,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="156dp"
-        android:layout_marginBottom="104dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginBottom="64dp"
         android:text="Back" />
 
 

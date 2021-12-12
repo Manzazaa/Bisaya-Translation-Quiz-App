@@ -88,7 +88,7 @@ public class QuizActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             QuizDbHelper dbHelper = QuizDbHelper.getInstance(this);
             questionList = dbHelper.getQuestions(categoryID, difficulty);
-            questionCountTotal = questionList.size();
+            questionCountTotal = 5;
             Collections.shuffle(questionList);
 
             showNextQuestion();

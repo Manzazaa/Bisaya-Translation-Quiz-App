@@ -13,8 +13,8 @@ import java.util.List;
 
 
 public class QuizDbHelper extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "QuizDatabase.db";
-    private static final int DATABASE_VERSION = 3;
+    private static final String DATABASE_NAME = "TranslationQuizDB.db";
+    private static final int DATABASE_VERSION = 1;
 
     private static QuizDbHelper instance;
 
