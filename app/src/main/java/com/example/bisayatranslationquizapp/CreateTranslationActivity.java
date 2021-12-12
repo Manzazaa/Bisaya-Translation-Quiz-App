@@ -52,7 +52,7 @@ public class CreateTranslationActivity  extends AppCompatActivity {
         button_back = findViewById(R.id.button_back);
     }
 
-    private void submitEntry(){
+    private void submitEntry() {
         String question = editText_word.getText().toString();
         String option1 = editText_option1.getText().toString();
         String option2 = editText_option2.getText().toString();
@@ -62,20 +62,20 @@ public class CreateTranslationActivity  extends AppCompatActivity {
         int categoryID = selectedCategory.getId();
         String categoryNameSelected = selectedCategory.getName();
         String difficultySelected = spinner_create_difficulty.getSelectedItem().toString();
-        String selectedAnswer = spinner_correct_answer.getSelectedItem().toString();
+        int selectedAnswer = Integer.parseInt(spinner_correct_answer.getSelectedItem().toString());
 
-        //QuizDbHelper.getInstance(this).addQuestion();
+        Toast.makeText(CreateTranslationActivity.this, "Category: " + categoryNameSelected + "\n" +
 
-        Toast.makeText(CreateTranslationActivity.this, "Category: "+categoryNameSelected+"\n"+
+                "Difficulty: " + difficultySelected + "\n" +
+                "Word: " + question + "\n" +
+                "Option 1: " + option1 + "\n" +
+                "Option 2: " + option2 + "\n" +
+                "Option 3: " + option3 + "\n" +
+                "Answer: " + selectedAnswer, Toast.LENGTH_SHORT).show();
 
-                "Difficulty: "+difficultySelected+"\n"+
-                "Word: "+question+"\n"+
-                "Option 1: "+option1+"\n"+
-                "Option 2: "+option2+"\n"+
-                "Option 3: "+option3+"\n"+
-                "Answer: "+ selectedAnswer, Toast.LENGTH_SHORT).show();
+        Question questionSet = new Question(question, option1, option2, option3, selectedAnswer, difficultySelected, categoryID);
+        QuizDbHelper.getInstance(this).addQuestion(questionSet);
     }
-
     private void loadCategories() {
         QuizDbHelper dbHelper = QuizDbHelper.getInstance(this);
         List<Category> categories = dbHelper.getAllCategories();
