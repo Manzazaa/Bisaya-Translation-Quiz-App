@@ -8,71 +8,101 @@
     android:padding="16dp"
     tools:context="com.example.bisayatranslationquizapp.StartingScreenActivity">
 
+    <ImageView
+        android:id="@+id/EngsayoLogo"
+        android:layout_width="240dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/iogo_image" />
+
     <TextView
+        android:id="@+id/EngsayoWordHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EngsayoLogo"
+        android:layout_centerHorizontal="true"
+        android:text="ENGSAYO"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/TranslateMeHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EngsayoWordHeader"
+        android:layout_centerHorizontal="true"
+        android:text="Found in Translation"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/TxtHeaderScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:text="ENGSAYO: Found in Translation"
+        android:layout_marginTop="330dp"
+        android:text="Highscore"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
-
     <TextView
         android:id="@+id/text_view_highscore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/button_start_quiz"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
-        android:backgroundTintMode="add"
-        android:text="Highscore: 0"
+        android:layout_below="@id/TxtHeaderScore"
+        android:text="0"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
+
+
+    <Spinner
+        android:id="@+id/spinner_category"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="430dp" />
+
+    <Spinner
+        android:id="@+id/spinner_difficulty"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="470dp"
+        android:spinnerMode="dropdown" />
+
 
     <Button
         android:id="@+id/button_start_quiz"
         android:layout_width="250dp"
         android:layout_height="80dp"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="520dp"
         android:background="@drawable/btn_icon_design"
         android:shadowColor="#fff"
         android:text="Get Started"
         android:textSize="23dp"
         android:textStyle="bold" />
 
-    <Spinner
-        android:id="@+id/spinner_category"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_start_quiz"
-        android:layout_alignStart="@+id/button_start_quiz"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="21dp"
-        android:layout_gravity="center"
-        />
-
-    <Spinner
-        android:id="@+id/spinner_difficulty"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/spinner_category"
-        android:layout_alignStart="@+id/button_start_quiz"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="11dp"
-        android:spinnerMode="dropdown" />
-
-    <Button
+    <TextView
         android:id="@+id/button_create_translation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/button_start_quiz"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="110dp"
-        android:text="Create Translation" />
+        android:layout_marginTop="10dp"
+        android:text=" Add Translation Here "
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
 
 </RelativeLayout>

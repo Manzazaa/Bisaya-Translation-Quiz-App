@@ -2,6 +2,7 @@ package com.example.bisayatranslationquizapp;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 //whatever
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 public class StartingScreenActivity extends AppCompatActivity {
@@ -25,7 +28,6 @@ public class StartingScreenActivity extends AppCompatActivity {
     private TextView textViewHighscore;
     private Spinner spinnerCategory;
     private Spinner spinnerDifficulty;
-
     private int highscore;
 
     @Override
@@ -49,7 +51,7 @@ public class StartingScreenActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonCreateTranslation = findViewById(R.id.button_create_translation);
+        TextView buttonCreateTranslation = findViewById(R.id.button_create_translation);
         buttonCreateTranslation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,12 +109,12 @@ public class StartingScreenActivity extends AppCompatActivity {
     private void loadHighscore() {
         SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         highscore = prefs.getInt(KEY_HIGHSCORE, 0);
-        textViewHighscore.setText("Highscore: " + highscore);
+        textViewHighscore.setText("" + highscore);
     }
 
     private void updateHighscore(int highscoreNew) {
         highscore = highscoreNew;
-        textViewHighscore.setText("Highscore: " + highscore);
+        textViewHighscore.setText("" + highscore);
 
         SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
