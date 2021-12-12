@@ -130,7 +130,7 @@ public class QuizActivity extends AppCompatActivity {
         rb2.setTextColor(textColorDefaultRb);
         rb3.setTextColor(textColorDefaultRb);
         rbGroup.clearCheck();
-        if (questionCounter < questionCountTotal) {
+        if (questionCounter < 10) {
             currentQuestion = questionList.get(questionCounter);
 
             textViewQuestion.setText(currentQuestion.getQuestion());
@@ -139,7 +139,7 @@ public class QuizActivity extends AppCompatActivity {
             rb3.setText("c. "+currentQuestion.getOption3());
 
             questionCounter++;
-            textViewQuestionCount.setText("Question: " + questionCounter + "/" + questionCountTotal);
+            textViewQuestionCount.setText("Question: " + questionCounter + "/" + 10);
             answered = false;
             buttonConfirmNext.setText("Confirm");
 
@@ -218,10 +218,10 @@ public class QuizActivity extends AppCompatActivity {
                 break;
         }
 
-        if (questionCounter < questionCountTotal) {
+        if (questionCounter < 10) {
             buttonConfirmNext.setText("Next");
         } else {
-            textViewTotalScore.setText("Final Score: "+ score + "/" + questionCountTotal);
+            textViewTotalScore.setText("Final Score: "+ score + "/" + 10);
             buttonConfirmNext.setText("Finish");
         }
     }
