@@ -57,7 +57,7 @@ public class CreateTranslationActivity  extends AppCompatActivity {
             }
         });
     }
-
+    //for submission to the DB
     private void submitEntry() {
         String question = editText_word.getText().toString();
         String option1 = editText_option1.getText().toString();
