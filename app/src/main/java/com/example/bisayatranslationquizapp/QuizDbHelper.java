@@ -30,7 +30,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         }
         return instance;
     }
-
+    //the first time the db is created, we will create it
     @Override
     public void onCreate(SQLiteDatabase db) {
         this.db = db;
@@ -225,8 +225,8 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 Question.DIFFICULTY_HARD, Category.ENGTOBIS);
         insertQuestion(q28);
         Question q29 = new Question("Do not worry.",
-                "Ayaw og kabalaka.", "Padayon sa paglambo.", "Maadto jud kog langit.", 1,
-                Question.DIFFICULTY_HARD, Category.ENGTOBIS);
+                    "Ayaw og kabalaka.", "Padayon sa paglambo.", "Maadto jud kog langit.", 1,
+                    Question.DIFFICULTY_HARD, Category.ENGTOBIS);
         insertQuestion(q29);
         Question q30 = new Question("I see you.",
                 "Lipaya oy.", "Kita tika.", "Naay bitin.", 2,

@@ -48,6 +48,14 @@ public class StartingScreenActivity extends AppCompatActivity {
                 startQuiz();
             }
         });
+
+        Button buttonCreateTranslation = findViewById(R.id.button_create_translation);
+        buttonCreateTranslation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                createTranslation();
+            }
+        });
     }
 
     private void startQuiz() {
@@ -110,5 +118,9 @@ public class StartingScreenActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(KEY_HIGHSCORE, highscore);
         editor.apply();
+    }
+    private void createTranslation(){
+        Intent intent2 = new Intent(StartingScreenActivity.this, CreateTranslationActivity.class);
+        startActivity(intent2);
     }
 }
