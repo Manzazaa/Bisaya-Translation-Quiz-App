@@ -88,7 +88,7 @@ public class QuizActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             QuizDbHelper dbHelper = QuizDbHelper.getInstance(this);
             questionList = dbHelper.getQuestions(categoryID, difficulty);
-            questionCountTotal = 5;
+            questionCountTotal = 10;
             Collections.shuffle(questionList);
 
             showNextQuestion();
@@ -130,7 +130,7 @@ public class QuizActivity extends AppCompatActivity {
         rb2.setTextColor(textColorDefaultRb);
         rb3.setTextColor(textColorDefaultRb);
         rbGroup.clearCheck();
-        if (questionCounter < 10) {
+        if (questionCounter < questionCountTotal) {
             currentQuestion = questionList.get(questionCounter);
 
             textViewQuestion.setText(currentQuestion.getQuestion());
@@ -139,7 +139,7 @@ public class QuizActivity extends AppCompatActivity {
             rb3.setText("c. "+currentQuestion.getOption3());
 
             questionCounter++;
-            textViewQuestionCount.setText("Question: " + questionCounter + "/" + 10);
+            textViewQuestionCount.setText("Question: " + questionCounter + "/" + questionCountTotal);
             answered = false;
             buttonConfirmNext.setText("Confirm");
 
@@ -218,10 +218,10 @@ public class QuizActivity extends AppCompatActivity {
                 break;
         }
 
-        if (questionCounter < 10) {
+        if (questionCounter < questionCountTotal) {
             buttonConfirmNext.setText("Next");
         } else {
-            textViewTotalScore.setText("Final Score: "+ score + "/" + 10);
+            textViewTotalScore.setText("Final Score: "+ score + "/" + questionCountTotal);
             buttonConfirmNext.setText("Finish");
         }
     }
