@@ -3,12 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BisayaTranslationQuizApp/app/src/main/res/font/black_ops_one.xml" value="0.121875" />
-        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BisayaTranslationQuizApp/app/src/main/res/layout/activity_create_question.xml" value="0.16621376811594202" />
-        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BisayaTranslationQuizApp/app/src/main/res/layout/activity_create_translation.xml" value="0.33" />
+        <entry key="..\:/AndroidProj/Bisaya-Translation-Quiz-App/app/src/main/res/layout/activity_create_translation.xml" value="0.1766304347826087" />
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BisayaTranslationQuizApp/app/src/main/res/layout/activity_main.xml" value="0.11005434782608696" />
         <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BisayaTranslationQuizApp/app/src/main/res/layout/activity_quiz.xml" value="0.33" />
-        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BisayaTranslationQuizApp/app/src/main/res/layout/activity_starting_screen.xml" value="0.33" />
+        <entry key="..\:/Users/TOSHIBA/AndroidStudioProjects/BisayaTranslationQuizApp/app/src/main/res/layout/activity_starting_screen.xml" value="0.11005434782608696" />
+        <entry key="..\:/Users/jeffe/OneDrive/Documents/GitHub/Bisaya-Translation-Quiz-App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/Users/jeffe/OneDrive/Documents/GitHub/Bisaya-Translation-Quiz-App/app/src/main/res/drawable/btn_icon_design.xml" value="0.2703125" />
+        <entry key="..\:/Users/jeffe/OneDrive/Documents/GitHub/Bisaya-Translation-Quiz-App/app/src/main/res/drawable/btn_icon_translation.xml" value="0.2703125" />
+        <entry key="..\:/Users/jeffe/OneDrive/Documents/GitHub/Bisaya-Translation-Quiz-App/app/src/main/res/font/black_ops_one.xml" value="0.284375" />
+        <entry key="..\:/Users/jeffe/OneDrive/Documents/GitHub/Bisaya-Translation-Quiz-App/app/src/main/res/font/font.xml" value="0.284375" />
+        <entry key="..\:/Users/jeffe/OneDrive/Documents/GitHub/Bisaya-Translation-Quiz-App/app/src/main/res/font/fonts.xml" value="0.284375" />
+        <entry key="..\:/Users/jeffe/OneDrive/Documents/GitHub/Bisaya-Translation-Quiz-App/app/src/main/res/layout/activity_create_translation.xml" value="0.4" />
+        <entry key="..\:/Users/jeffe/OneDrive/Documents/GitHub/Bisaya-Translation-Quiz-App/app/src/main/res/layout/activity_quiz.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/jeffe/OneDrive/Documents/GitHub/Bisaya-Translation-Quiz-App/app/src/main/res/layout/activity_starting_screen.xml" value="0.34523809523809523" />
       </map>
     </option>
   </component>
