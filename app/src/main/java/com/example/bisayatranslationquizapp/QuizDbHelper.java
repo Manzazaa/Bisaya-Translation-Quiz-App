@@ -122,6 +122,27 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 "Epic", "Unsavory", "Delicious", 3,
                 Question.DIFFICULTY_EASY, Category.BISTOENG);
         insertQuestion(q5);
+        Question q31 = new Question("Dagan",
+                "Crawl", "Run", "Jump", 2,
+                Question.DIFFICULTY_EASY, Category.BISTOENG);
+        insertQuestion(q31);
+        Question q32 = new Question("Hilak",
+                "Kiss", "Breathe", "Cry", 3,
+                Question.DIFFICULTY_EASY, Category.BISTOENG);
+        insertQuestion(q32);
+        Question q33 = new Question("Halok",
+                "Talk", "Cry", "Kiss", 3,
+                Question.DIFFICULTY_EASY, Category.BISTOENG);
+        insertQuestion(q33);
+        Question q34 = new Question("Ngipon",
+                "Teeth", "Mouth", "Lips", 1,
+                Question.DIFFICULTY_EASY, Category.BISTOENG);
+        insertQuestion(q34);
+        Question q35 = new Question("Barato",
+                "Stone", "Cheap", "Boat", 2,
+                Question.DIFFICULTY_EASY, Category.BISTOENG);
+        insertQuestion(q35);
+
 
         //ENG TO BIS EASY
         Question q6 = new Question("Nice",
@@ -144,6 +165,26 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 "Likod", "Atubangan", "Kilid", 1,
                 Question.DIFFICULTY_EASY, Category.ENGTOBIS);
         insertQuestion(q10);
+        Question q36 = new Question("Snore",
+                "Dakop", "Hadlok", "Hagok", 3,
+                Question.DIFFICULTY_EASY, Category.ENGTOBIS);
+        insertQuestion(q36);
+        Question q37 = new Question( "Chase",
+                "Tuklod", "Gukod", "Bukol", 2,
+                Question.DIFFICULTY_EASY, Category.ENGTOBIS);
+        insertQuestion(q37);
+        Question q38 = new Question("Maybe",
+                "Siguro", "Sigurado", "Sulod", 1,
+                Question.DIFFICULTY_EASY, Category.ENGTOBIS);
+        insertQuestion(q38);
+        Question q39 = new Question("Handsome",
+                "Kamot", "Gwapa", "Gwapo", 3,
+                Question.DIFFICULTY_EASY, Category.ENGTOBIS);
+        insertQuestion(q39);
+        Question q40 = new Question("Beautiful",
+                "Gwapo", "Gagmay", "Gwapa", 3,
+                Question.DIFFICULTY_EASY, Category.ENGTOBIS);
+        insertQuestion(q40);
 
         //MEDIUM ENG TO BIS
         Question q11 = new Question("Sky",
@@ -166,6 +207,26 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 "Ikaw", "Yawa", "Nawong", 2,
                 Question.DIFFICULTY_MEDIUM, Category.ENGTOBIS);
         insertQuestion(q15);
+        Question q41 = new Question("Path",
+                "Agianan", "Adlawan", "Ganiha", 1,
+                Question.DIFFICULTY_MEDIUM, Category.ENGTOBIS);
+        insertQuestion(q41);
+        Question q42 = new Question("Sea",
+                "Langit", "Nakita", "Dagat", 3,
+                Question.DIFFICULTY_MEDIUM, Category.ENGTOBIS);
+        insertQuestion(q42);
+        Question q43 = new Question("Shoulders",
+                "Ulo", "Likod", "Abaga", 3,
+                Question.DIFFICULTY_MEDIUM, Category.ENGTOBIS);
+        insertQuestion(q43);
+        Question q44 = new Question("Soft",
+                "Humok", "Gahi", "Humot", 1,
+                Question.DIFFICULTY_MEDIUM, Category.ENGTOBIS);
+        insertQuestion(q44);
+        Question q45 = new Question("Island",
+                "Isda", "Isla", "Isa", 2,
+                Question.DIFFICULTY_MEDIUM, Category.ENGTOBIS);
+        insertQuestion(q45);
 
         //MEDIUM BIS TO ENG
         Question q16 = new Question("Gipasindan-an",
@@ -188,6 +249,27 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 "A little bit of both", "Sometimes", "Always", 3,
                 Question.DIFFICULTY_MEDIUM, Category.BISTOENG);
         insertQuestion(q20);
+        Question q46 = new Question("Hugaw",
+                "Talk", "Dirty", "To me", 2,
+                Question.DIFFICULTY_MEDIUM, Category.BISTOENG);
+        insertQuestion(q46);
+        Question q47 = new Question("Giapangayo",
+                "Just a little bit", "Add more", "Asked for", 3,
+                Question.DIFFICULTY_MEDIUM, Category.BISTOENG);
+        insertQuestion(q47);
+        Question q48 = new Question("Kanamo",
+                "Us", "You", "Me", 1,
+                Question.DIFFICULTY_MEDIUM, Category.BISTOENG);
+        insertQuestion(q48);
+        Question q49 = new Question("Libog",
+                "Horny", "Confused", "Thousand", 2,
+                Question.DIFFICULTY_MEDIUM, Category.BISTOENG);
+        insertQuestion(q49);
+        Question q50 = new Question("Binhod",
+                "Dumb", "Numb", "Bonfire", 2,
+                Question.DIFFICULTY_MEDIUM, Category.BISTOENG);
+        insertQuestion(q50);
+
 
         //HARD BIS TO ENG
         Question q21 = new Question("Asa ka gikan?",
@@ -210,6 +292,26 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 "I told you, right?", "The carpet does not fly, right?", "We have the same mother, right?", 1,
                 Question.DIFFICULTY_HARD, Category.BISTOENG);
         insertQuestion(q25);
+        Question q51 = new Question("Kumusta imong adlaw?",
+                "Are you alright?", "How's your day?", "Is the sun okay?", 2,
+                Question.DIFFICULTY_HARD, Category.BISTOENG);
+        insertQuestion(q51);
+        Question q52 = new Question("Gimingaw kaayo ko nimo.",
+                "Let's go out.", "I really like the weather.", "I really miss you.", 3,
+                Question.DIFFICULTY_HARD, Category.BISTOENG);
+        insertQuestion(q52);
+        Question q53 = new Question("Wala ko kasabot.",
+                "There's no grass.", "I don't know.", "I don't understand.", 3,
+                Question.DIFFICULTY_HARD, Category.BISTOENG);
+        insertQuestion(q53);
+        Question q54 = new Question("Your mother",
+                "Imong mama", "Imong papa", "Inom tubig", 1,
+                Question.DIFFICULTY_HARD, Category.BISTOENG);
+        insertQuestion(q54);
+        Question q55 = new Question("Asa ka muadto?",
+                "What are you up to?", "Where are you going?", "Where is your house?", 2,
+                Question.DIFFICULTY_HARD, Category.BISTOENG);
+        insertQuestion(q55);
 
         //HARD ENG TO BIS
         Question q26 = new Question("I am so happy.",
@@ -232,6 +334,27 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 "Lipaya oy.", "Kita tika.", "Naay bitin.", 2,
                 Question.DIFFICULTY_HARD, Category.ENGTOBIS);
         insertQuestion(q30);
+        Question q56 = new Question("It's so very expensive.",
+                "Mahal na ata kita.", "Kita tika.", "Mahal kaayo.", 3,
+                Question.DIFFICULTY_HARD, Category.ENGTOBIS);
+        insertQuestion(q56);
+        Question q57 = new Question("I’d like to pay.",
+                "Gusto ko makig dula.", "Muuli nako.", "Mubayad nako.", 3,
+                Question.DIFFICULTY_HARD, Category.ENGTOBIS);
+        insertQuestion(q57);
+        Question q58 = new Question("See you later.",
+                "Kita lang ta unya.", "Padayon sa paglambo.", "Kita nalang duha.", 1,
+                Question.DIFFICULTY_HARD, Category.ENGTOBIS);
+        insertQuestion(q58);
+        Question q59 = new Question("Where's the toilet?",
+                "The carpet does not fly, right?", "Asa ang banyo?", "Asa namo?", 2,
+                Question.DIFFICULTY_HARD, Category.ENGTOBIS);
+        insertQuestion(q59);
+        Question q60 = new Question("One language is never enough",
+                "Dili gayod sakto kung usa ra ka sinutian.", "Lamin na kaayo matulog.", "Dili sakto kung guot.", 1,
+                Question.DIFFICULTY_HARD, Category.ENGTOBIS);
+        insertQuestion(q60);
+
 
     }
 
