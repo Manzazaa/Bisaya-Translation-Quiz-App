@@ -4,7 +4,7 @@
     //activity_starting_string
     <string name="title">ENGSAYO</string>
     <string name="subtitle">Found in Translation</string>
-    <string name="hscore">Highscore</string>
+    <string name="hscore">Ranking</string>
     <string name="start">Get Started</string>
     <string name="add">Add Translation Here</string>
 

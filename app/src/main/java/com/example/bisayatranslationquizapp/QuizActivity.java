@@ -54,6 +54,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private int score;
     private boolean answered;
+    private String difficulty;
 
     private long backPressedTime;
 
@@ -80,7 +81,7 @@ public class QuizActivity extends AppCompatActivity {
         Intent intent = getIntent();
         int categoryID = intent.getIntExtra(StartingScreenActivity.EXTRA_CATEGORY_ID, 0);
         String categoryName = intent.getStringExtra(StartingScreenActivity.EXTRA_CATEGORY_NAME);
-        String difficulty = intent.getStringExtra(StartingScreenActivity.EXTRA_DIFFICULTY);
+        difficulty = intent.getStringExtra(StartingScreenActivity.EXTRA_DIFFICULTY);
 
         textViewCategory.setText("Category: " + categoryName);
         textViewDifficulty.setText("Difficulty: " + difficulty);
@@ -188,22 +189,45 @@ public class QuizActivity extends AppCompatActivity {
         countDownTimer.cancel();
 
         RadioButton rbSelected = findViewById(rbGroup.getCheckedRadioButtonId());
+
         int answerNr = rbGroup.indexOfChild(rbSelected) + 1;
 
         if (answerNr == currentQuestion.getAnswerNr()) {
-            score++;
-            textViewScore.setText("Score: " + score);
+            switch (difficulty){
+                case "Easy":
+                    score++;
+                    textViewScore.setText("Score: " + score);
+                    break;
+                case "Medium":
+                    score+=2;
+                    textViewScore.setText("Score: " + (score/2));
+                    break;
+                case "Hard":
+                    score+=3;
+                    textViewScore.setText("Score: " + (score/3));
+                    break;
+                default:
+                    Toast.makeText(this, "Error in adding", Toast.LENGTH_SHORT).show();
+                    break;
+            }
         }
-
         showSolution();
     }
 
     private void showSolution() {
+        RadioButton rbSelected = findViewById(rbGroup.getCheckedRadioButtonId());
+        int answerNr = rbGroup.indexOfChild(rbSelected) + 1;
+
         rb1.setTextColor(Color.RED);
         rb2.setTextColor(Color.RED);
         rb3.setTextColor(Color.RED);
 
-        switch (currentQuestion.getAnswerNr()) {
+        if (answerNr == currentQuestion.getAnswerNr()) {
+            textViewQuestion.setText("Correct!");
+        }else{
+            textViewQuestion.setText("Wrong!");
+        }
+        /*switch (currentQuestion.getAnswerNr()) {
             case 1:
                 rb1.setTextColor(Color.GREEN);
                 textViewQuestion.setText("The correct answer is a!");
@@ -216,12 +240,11 @@ public class QuizActivity extends AppCompatActivity {
                 rb3.setTextColor(Color.GREEN);
                 textViewQuestion.setText("The correct answer is c!");
                 break;
-        }
-
+        }*/
         if (questionCounter < questionCountTotal) {
             buttonConfirmNext.setText("Next");
         } else {
-            textViewTotalScore.setText("Final Score: "+ score + "/" + questionCountTotal);
+            textViewTotalScore.setText("Final Score: "+textViewScore.getText() + "/" + questionCountTotal);
             buttonConfirmNext.setText("Finish");
         }
     }

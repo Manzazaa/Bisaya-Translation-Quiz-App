@@ -23,25 +23,25 @@ public class StartingScreenActivity extends AppCompatActivity {
     public static final String EXTRA_DIFFICULTY = "extraDifficulty";
 
     public static final String SHARED_PREFS = "sharedPrefs";
-    public static final String KEY_HIGHSCORE = "keyHighscore";
+    public static final String KEY_rank = "keyrank";
 
-    private TextView textViewHighscore;
+    private TextView textViewrank;
     private Spinner spinnerCategory;
     private Spinner spinnerDifficulty;
-    private int highscore;
+    private int rank;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_starting_screen);
 
-        textViewHighscore = findViewById(R.id.text_view_highscore);
+        textViewrank = findViewById(R.id.text_view_rank);
         spinnerCategory = findViewById(R.id.spinner_category);
         spinnerDifficulty = findViewById(R.id.spinner_difficulty);
 
         loadCategories();
         loadDifficultyLevels();
-        loadHighscore();
+        loadrank();
 
         Button buttonStartQuiz = findViewById(R.id.button_start_quiz);
         buttonStartQuiz.setOnClickListener(new View.OnClickListener() {
@@ -80,8 +80,9 @@ public class StartingScreenActivity extends AppCompatActivity {
         if (requestCode == REQUEST_CODE_QUIZ) {
             if (resultCode == RESULT_OK) {
                 int score = data.getIntExtra(QuizActivity.EXTRA_SCORE, 0);
-                if (score > highscore) {
-                    updateHighscore(score);
+                if (score > 0) {
+                    int totalScore = score+rank;
+                    updaterank(totalScore);
                 }
             }
         }
@@ -106,19 +107,19 @@ public class StartingScreenActivity extends AppCompatActivity {
         spinnerDifficulty.setAdapter(adapterDifficulty);
     }
 
-    private void loadHighscore() {
+    private void loadrank() {
         SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        highscore = prefs.getInt(KEY_HIGHSCORE, 0);
-        textViewHighscore.setText("" + highscore);
+        rank = prefs.getInt(KEY_rank, 0);
+        textViewrank.setText("" + rank+" total pts");
     }
 
-    private void updateHighscore(int highscoreNew) {
-        highscore = highscoreNew;
-        textViewHighscore.setText("" + highscore);
+    private void updaterank(int rankNew) {
+        rank = rankNew;
+        textViewrank.setText("" + rank+" total pts");
 
         SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putInt(KEY_HIGHSCORE, highscore);
+        editor.putInt(KEY_rank, rank);
         editor.apply();
     }
     private void createTranslation(){
