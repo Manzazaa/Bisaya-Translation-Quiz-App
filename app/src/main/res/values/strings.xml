@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">Bisaya Translation Quiz App</string>
+
+    //activity_starting_string
+    <string name="title">ENGSAYO</string>
+    <string name="subtitle">Found in Translation</string>
+    <string name="hscore">Highscore</string>
+    <string name="start">Get Started</string>
+    <string name="add">Add Translation Here</string>
+
+    //activity_quiz
+    <string name="score">Score: 0</string>
+    <string name="question">Question: 1/x</string>
+    <string name="category">Category: </string>
+    <string name="diff">Difficulty: </string>
+    <string name="questions">Here will be the question text\nHere will be the question text\nHere will be the question text</string>
+    <string name="opt1">Option 1</string>
+    <string name="opt2">Option 2</string>
+    <string name="opt3">Option 3</string>
+    <string name="conf">Confirm</string>
+
+    //activity_create_translation
+    <string name="createT">Create a Translation</string>
+    <string name="cat">Category</string>
+    <string name="dif">Difficulty</string>
+    <string name="wordT">Word to be translated</string>
+    <string name="tbT">To be translated</string>
+    <string name="trans">Translations</string>
+    <string name="CAopt">Correct Answer Option</string>
+    <string name="create">Create</string>
+    <string name="back">Back</string>
 </resources>

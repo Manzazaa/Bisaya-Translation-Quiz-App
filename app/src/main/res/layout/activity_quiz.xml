@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:freezesText="true"
-        android:text="Score: 0"
+        android:text="@string/score"
         android:textColor="@android:color/black" />
 
     <TextView
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/text_view_score"
         android:freezesText="true"
-        android:text="Question: 1/x"
+        android:text="@string/question"
         android:textColor="@android:color/black" />
 
     <TextView
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/text_view_question_count"
         android:freezesText="true"
-        android:text="Category: "
+        android:text="@string/category"
         android:textColor="@android:color/black" />
 
     <TextView
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/text_view_category"
         android:freezesText="true"
-        android:text="Difficulty: "
+        android:text="@string/diff"
         android:textColor="@android:color/black" />
 
     <TextView
@@ -60,7 +60,7 @@
         android:layout_above="@id/radio_group"
         android:layout_marginBottom="16dp"
         android:freezesText="true"
-        android:text="Here will be the question text\nHere will be the question text\nHere will be the question text"
+        android:text="@string/questions"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="20sp" />
@@ -76,21 +76,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:freezesText="true"
-            android:text="Option 1" />
+            android:text="@string/opt1" />
 
         <RadioButton
             android:id="@+id/radio_button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:freezesText="true"
-            android:text="Option 2" />
+            android:text="@string/opt2" />
 
         <RadioButton
             android:id="@+id/radio_button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:freezesText="true"
-            android:text="Option 3" />
+            android:text="@string/opt3" />
 
     </RadioGroup>
 
@@ -112,6 +112,6 @@
         android:layout_below="@id/radio_group"
         android:layout_marginTop="16dp"
         android:freezesText="true"
-        android:text="Confirm" />
+        android:text="@string/conf" />
 
 </RelativeLayout>
