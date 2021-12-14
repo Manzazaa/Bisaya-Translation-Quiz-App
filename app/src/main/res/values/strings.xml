@@ -13,7 +13,7 @@
     <string name="question">Question: 1/x</string>
     <string name="category">Category: </string>
     <string name="diff">Difficulty: </string>
-    <string name="questions">Here will be the question text\nHere will be the question text\nHere will be the question text</string>
+    <string name="questions">Questions</string>
     <string name="opt1">Option 1</string>
     <string name="opt2">Option 2</string>
     <string name="opt3">Option 3</string>
@@ -29,4 +29,5 @@
     <string name="CAopt">Correct Answer Option</string>
     <string name="create">Create</string>
     <string name="back">Back</string>
+
 </resources>

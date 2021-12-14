@@ -83,7 +83,7 @@ public class QuizActivity extends AppCompatActivity {
         String categoryName = intent.getStringExtra(StartingScreenActivity.EXTRA_CATEGORY_NAME);
         difficulty = intent.getStringExtra(StartingScreenActivity.EXTRA_DIFFICULTY);
 
-        textViewCategory.setText("Category: " + categoryName);
+        textViewCategory.setText("" + categoryName);
         textViewDifficulty.setText("Difficulty: " + difficulty);
 
         if (savedInstanceState == null) {
