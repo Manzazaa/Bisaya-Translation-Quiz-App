@@ -110,12 +110,12 @@ public class StartingScreenActivity extends AppCompatActivity {
     private void loadrank() {
         SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         rank = prefs.getInt(KEY_rank, 0);
-        textViewrank.setText("" + rank+" total pts");
+        textViewrank.setText("" + rank+" pts");
     }
 
     private void updaterank(int rankNew) {
         rank = rankNew;
-        textViewrank.setText("" + rank+" total pts");
+        textViewrank.setText("" + rank+" pts");
 
         SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
