@@ -31,6 +31,8 @@ public class StartingScreenActivity extends AppCompatActivity {
     private Spinner spinnerDifficulty;
     private int rank;
 
+    MediaPlayer mpMenu;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,8 +46,11 @@ public class StartingScreenActivity extends AppCompatActivity {
         loadDifficultyLevels();
         loadrank();
 
-        final MediaPlayer mpMenu = MediaPlayer.create(this,R.raw.menu);
-        mpMenu.start();
+        if(mpMenu == null){
+            mpMenu = MediaPlayer.create(this,R.raw.menu); //we assign the music to the mediaplayer variable
+        }
+        mpMenu.start();//we start and loop it
+        mpMenu.setLooping(true);
 
         Button buttonStartQuiz = findViewById(R.id.button_start_quiz);
         buttonStartQuiz.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +80,7 @@ public class StartingScreenActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_CATEGORY_NAME, categoryName);
         intent.putExtra(EXTRA_DIFFICULTY, difficulty);
         startActivityForResult(intent, REQUEST_CODE_QUIZ);
+        mpMenu.release();
     }
 
     @Override
@@ -129,5 +135,9 @@ public class StartingScreenActivity extends AppCompatActivity {
     private void createTranslation(){
         Intent intent2 = new Intent(StartingScreenActivity.this, CreateTranslationActivity.class);
         startActivity(intent2);
+    }
+    protected void onStop(){
+        super.onStop();
+        mpMenu.release();
     }
 }
