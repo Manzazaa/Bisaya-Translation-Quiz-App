@@ -61,7 +61,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         fillQuestionsTable();
     }
 
-    @Override
+    @Override //if there are changes to the structure of the db, we upgrade it
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + CategoriesTable.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + QuestionsTable.TABLE_NAME);
@@ -74,7 +74,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         db.setForeignKeyConstraintsEnabled(true);
     }
 
-    private void fillCategoriesTable() {
+    private void fillCategoriesTable() {//method for filling the category table
         Category c1 = new Category("English to Bisaya");
         insertCategory(c1);
         Category c2 = new Category("Bisaya to English");
@@ -100,7 +100,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         db.insert(CategoriesTable.TABLE_NAME, null, cv);
     }
 
-    private void fillQuestionsTable() {
+    private void fillQuestionsTable() {//filling th questions table
         //BIS TO ENG EASY
         Question q1 = new Question("Iring",
                 "Cat", "Dog", "Spinosaurus", 1,
@@ -358,7 +358,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
     }
 
-    public void addQuestion(Question question) {
+    public void addQuestion(Question question) { //creating a new question instance to be added dynamically
         db = getWritableDatabase();
         insertQuestion(question);
     }
@@ -371,7 +371,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         }
     }
 
-    private void insertQuestion(Question question) {
+    private void insertQuestion(Question question) {//inserting into the database fetched from the Question object
         ContentValues cv = new ContentValues();
         cv.put(QuestionsTable.COLUMN_QUESTION, question.getQuestion());
         cv.put(QuestionsTable.COLUMN_OPTION1, question.getOption1());

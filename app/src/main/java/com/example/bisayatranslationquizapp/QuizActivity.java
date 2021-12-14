@@ -3,6 +3,7 @@ package com.example.bisayatranslationquizapp;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.os.Bundle;
 import android.view.View;
@@ -217,7 +218,8 @@ public class QuizActivity extends AppCompatActivity {
     private void showSolution() {
         RadioButton rbSelected = findViewById(rbGroup.getCheckedRadioButtonId());
         int answerNr = rbGroup.indexOfChild(rbSelected) + 1;
-
+        final MediaPlayer mpCorrect = MediaPlayer.create(this,R.raw.correct);
+        final MediaPlayer mpWrong = MediaPlayer.create(this,R.raw.wrong);
         rb1.setTextColor(Color.RED);
         rb2.setTextColor(Color.RED);
         rb3.setTextColor(Color.RED);
@@ -225,8 +227,10 @@ public class QuizActivity extends AppCompatActivity {
         if (answerNr == currentQuestion.getAnswerNr()) {
             textViewQuestion.setText("Correct!");
             rbSelected.setTextColor(Color.GREEN);
+            mpCorrect.start();
         }else{
             textViewQuestion.setText("Wrong!");
+            mpWrong.start();
         }
         /*switch (currentQuestion.getAnswerNr()) {
             case 1:

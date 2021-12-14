@@ -3,6 +3,7 @@ package com.example.bisayatranslationquizapp;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Paint;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -42,6 +43,9 @@ public class StartingScreenActivity extends AppCompatActivity {
         loadCategories();
         loadDifficultyLevels();
         loadrank();
+
+        final MediaPlayer mpMenu = MediaPlayer.create(this,R.raw.menu);
+        mpMenu.start();
 
         Button buttonStartQuiz = findViewById(R.id.button_start_quiz);
         buttonStartQuiz.setOnClickListener(new View.OnClickListener() {
