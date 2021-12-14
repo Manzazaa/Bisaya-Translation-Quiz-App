@@ -32,6 +32,7 @@ public class QuizActivity extends AppCompatActivity {
     private TextView textViewQuestion;
     private TextView textViewScore;
     private TextView textViewQuestionCount;
+    private TextView textViewResult;
     private TextView textViewCategory;
     private TextView textViewDifficulty;
     private TextView textViewCountDown;
@@ -64,6 +65,7 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
         textViewTotalScore = findViewById(R.id.textViewTotalScore);
+        textViewResult = findViewById(R.id.text_view_result);
         textViewQuestion = findViewById(R.id.text_view_question);
         textViewScore = findViewById(R.id.text_view_score);
         textViewQuestionCount = findViewById(R.id.text_view_question_count);
@@ -135,10 +137,11 @@ public class QuizActivity extends AppCompatActivity {
         if (questionCounter < questionCountTotal) {
             currentQuestion = questionList.get(questionCounter);
 
+            textViewResult.setText("");
             textViewQuestion.setText(currentQuestion.getQuestion());
-            rb1.setText("a. "+currentQuestion.getOption1());
-            rb2.setText("b. "+currentQuestion.getOption2());
-            rb3.setText("c. "+currentQuestion.getOption3());
+            rb1.setText(" "+currentQuestion.getOption1());
+            rb2.setText(" "+currentQuestion.getOption2());
+            rb3.setText(" "+currentQuestion.getOption3());
 
             questionCounter++;
             textViewQuestionCount.setText("Question: " + questionCounter + "/" + questionCountTotal);
@@ -225,11 +228,13 @@ public class QuizActivity extends AppCompatActivity {
         rb3.setTextColor(Color.RED);
 
         if (answerNr == currentQuestion.getAnswerNr()) {
-            textViewQuestion.setText("Correct!");
+            textViewResult.setText("Correct!");
+            textViewResult.setTextColor(Color.GREEN);
             rbSelected.setTextColor(Color.GREEN);
             mpCorrect.start();
         }else{
-            textViewQuestion.setText("Wrong!");
+            textViewResult.setText("Wrong!");
+            textViewResult.setTextColor(Color.RED);
             mpWrong.start();
         }
         /*switch (currentQuestion.getAnswerNr()) {
@@ -249,6 +254,7 @@ public class QuizActivity extends AppCompatActivity {
         if (questionCounter < questionCountTotal) {
             buttonConfirmNext.setText("Next");
         } else {
+            textViewResult.setText("");
             textViewTotalScore.setText("Final Score: "+textViewScore.getText() + "/" + questionCountTotal);
             buttonConfirmNext.setText("Finish");
         }

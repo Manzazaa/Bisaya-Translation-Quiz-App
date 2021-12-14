@@ -60,10 +60,25 @@
         android:textColor="@android:color/black"
         android:textSize="40sp" />
 
+    <TextView
+        android:id="@+id/text_view_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:freezesText="true"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
     <RelativeLayout
         android:id="@+id/RelativeLayoutGroup"
         android:layout_width="400dp"
-        android:layout_height="300dp"
+        android:layout_height="400dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
         android:background="@drawable/border_box_layout">
@@ -73,8 +88,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@id/radio_group"
-            android:layout_margin="10dp"
-            android:layout_marginBottom="36dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:freezesText="true"
             android:text="@string/questions"
             android:textAlignment="center"
@@ -92,7 +109,10 @@
                 android:id="@+id/radio_button1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
                 android:freezesText="true"
                 android:text="@string/opt1"
                 android:textSize="20dp" />
@@ -135,7 +155,7 @@
         android:layout_height="70dp"
         android:layout_below="@id/RelativeLayoutGroup"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/btn_icon_design"
         android:text="@string/conf"
         android:textAlignment="center" />
