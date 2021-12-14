@@ -255,7 +255,7 @@ public class QuizActivity extends AppCompatActivity {
             buttonConfirmNext.setText("Next");
         } else {
             textViewResult.setText("");
-            textViewTotalScore.setText("Final Score: "+textViewScore.getText() + "/" + questionCountTotal);
+            textViewTotalScore.setText("Final "+textViewScore.getText() + "/" + questionCountTotal);
             buttonConfirmNext.setText("Finish");
         }
     }
