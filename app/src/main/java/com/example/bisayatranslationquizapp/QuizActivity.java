@@ -224,6 +224,7 @@ public class QuizActivity extends AppCompatActivity {
 
         if (answerNr == currentQuestion.getAnswerNr()) {
             textViewQuestion.setText("Correct!");
+            rbSelected.setTextColor(Color.GREEN);
         }else{
             textViewQuestion.setText("Wrong!");
         }
