@@ -304,8 +304,8 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 "There's no grass.", "I don't know.", "I don't understand.", 3,
                 Question.DIFFICULTY_HARD, Category.BISTOENG);
         insertQuestion(q53);
-        Question q54 = new Question("Your mother",
-                "Imong mama", "Imong papa", "Inom tubig", 1,
+        Question q54 = new Question("Imong mama",
+                "Your mother", "Your father", "Gentleman", 1,
                 Question.DIFFICULTY_HARD, Category.BISTOENG);
         insertQuestion(q54);
         Question q55 = new Question("Asa ka muadto?",
