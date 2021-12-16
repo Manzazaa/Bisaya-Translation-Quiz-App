@@ -334,7 +334,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 "Lipaya oy.", "Kita tika.", "Naay bitin.", 2,
                 Question.DIFFICULTY_HARD, Category.ENGTOBIS);
         insertQuestion(q30);
-        Question q56 = new Question("It's so very expensive.",
+        Question q56 = new Question("It's very expensive.",
                 "Mahal na ata kita.", "Kita tika.", "Mahal kaayo.", 3,
                 Question.DIFFICULTY_HARD, Category.ENGTOBIS);
         insertQuestion(q56);
