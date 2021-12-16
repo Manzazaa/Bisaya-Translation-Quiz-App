@@ -1,7 +1,7 @@
 package com.example.bisayatranslationquizapp;
 
 import android.provider.BaseColumns;
-
+//this class is used for storing the constants for the sqlite db
 public final class QuizContract {
 
     private QuizContract() {

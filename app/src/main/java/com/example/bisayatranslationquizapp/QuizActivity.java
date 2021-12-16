@@ -128,7 +128,7 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
     }
-
+    //method for showing the question
     private void showNextQuestion() {
         rb1.setTextColor(textColorDefaultRb);
         rb2.setTextColor(textColorDefaultRb);
@@ -223,6 +223,7 @@ public class QuizActivity extends AppCompatActivity {
         int answerNr = rbGroup.indexOfChild(rbSelected) + 1;
         final MediaPlayer mpCorrect = MediaPlayer.create(this,R.raw.correct);
         final MediaPlayer mpWrong = MediaPlayer.create(this,R.raw.wrong);
+
         rb1.setTextColor(Color.RED);
         rb2.setTextColor(Color.RED);
         rb3.setTextColor(Color.RED);
@@ -237,20 +238,6 @@ public class QuizActivity extends AppCompatActivity {
             textViewResult.setTextColor(Color.RED);
             mpWrong.start();
         }
-        /*switch (currentQuestion.getAnswerNr()) {
-            case 1:
-                rb1.setTextColor(Color.GREEN);
-                textViewQuestion.setText("The correct answer is a!");
-                break;
-            case 2:
-                rb2.setTextColor(Color.GREEN);
-                textViewQuestion.setText("The correct answer is b!");
-                break;
-            case 3:
-                rb3.setTextColor(Color.GREEN);
-                textViewQuestion.setText("The correct answer is c!");
-                break;
-        }*/
         if (questionCounter < questionCountTotal) {
             buttonConfirmNext.setText("Next");
         } else {
