@@ -11,7 +11,6 @@ import com.example.bisayatranslationquizapp.QuizContract.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class QuizDbHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "TranslationQuizDB.db";
     private static final int DATABASE_VERSION = 1;
@@ -73,8 +72,8 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         super.onConfigure(db);
         db.setForeignKeyConstraintsEnabled(true);
     }
-
-    private void fillCategoriesTable() {//method for filling the category table
+    //method for filling the category table
+    private void fillCategoriesTable() {
         Category c1 = new Category("English to Bisaya");
         insertCategory(c1);
         Category c2 = new Category("Bisaya to English");
@@ -370,8 +369,8 @@ public class QuizDbHelper extends SQLiteOpenHelper {
             insertQuestion(question);
         }
     }
-
-    private void insertQuestion(Question question) {//inserting into the database fetched from the Question object
+    //inserting into the database fetched from the Question object
+    private void insertQuestion(Question question) {
         ContentValues cv = new ContentValues();
         cv.put(QuestionsTable.COLUMN_QUESTION, question.getQuestion());
         cv.put(QuestionsTable.COLUMN_OPTION1, question.getOption1());
@@ -400,14 +399,14 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         c.close();
         return categoryList;
     }
-
+    //for retrieving the questions
     public ArrayList<Question> getAllQuestions() {
         ArrayList<Question> questionList = new ArrayList<>();
         db = getReadableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM " + QuestionsTable.TABLE_NAME, null);
 
-        if (c.moveToFirst()) {
-            do {
+        if (c.moveToFirst()) {//if the first entry exists, retrieve it, otherwise move to next
+            do {//loop the rows and store them into the table
                 Question question = new Question();
                 question.setId(c.getInt(c.getColumnIndex(QuestionsTable._ID)));
                 question.setQuestion(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_QUESTION)));

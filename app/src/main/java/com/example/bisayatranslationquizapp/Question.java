@@ -3,7 +3,7 @@ package com.example.bisayatranslationquizapp;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
+//this class serves as the bridge between the app and the database
 public class Question implements Parcelable {
     public static final String DIFFICULTY_EASY = "Easy";
     public static final String DIFFICULTY_MEDIUM = "Medium";
@@ -20,7 +20,7 @@ public class Question implements Parcelable {
 
     public Question() {
     }
-
+    //constructor for the question object
     public Question(String question, String option1, String option2, String option3,
                     int answerNr, String difficulty, int categoryID) {
         this.question = question;
