@@ -93,7 +93,7 @@ public class QuizActivity extends AppCompatActivity {
             QuizDbHelper dbHelper = QuizDbHelper.getInstance(this);
             questionList = dbHelper.getQuestions(categoryID, difficulty);
             questionCountTotal = 10;
-            Collections.shuffle(questionList);
+            Collections.shuffle(questionList); //randomizer
 
             showNextQuestion();
         } else {

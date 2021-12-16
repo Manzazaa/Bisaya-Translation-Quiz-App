@@ -99,7 +99,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         db.insert(CategoriesTable.TABLE_NAME, null, cv);
     }
 
-    private void fillQuestionsTable() {//filling th questions table
+    private void fillQuestionsTable() {//filling the questions table
         //BIS TO ENG EASY
         Question q1 = new Question("Iring",
                 "Cat", "Dog", "Spinosaurus", 1,
@@ -202,8 +202,8 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 "Window", "Purtahan", "Pinto", 2,
                 Question.DIFFICULTY_MEDIUM, Category.ENGTOBIS);
         insertQuestion(q14);
-        Question q15 = new Question("Demon",
-                "Ikaw", "Yawa", "Nawong", 2,
+        Question q15 = new Question("Rice",
+                "Kanon", "Saba", "Nawong", 2,
                 Question.DIFFICULTY_MEDIUM, Category.ENGTOBIS);
         insertQuestion(q15);
         Question q41 = new Question("Path",
@@ -261,7 +261,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 Question.DIFFICULTY_MEDIUM, Category.BISTOENG);
         insertQuestion(q48);
         Question q49 = new Question("Libog",
-                "Horny", "Confused", "Thousand", 2,
+                "Annoyed", "Confused", "Thousand", 2,
                 Question.DIFFICULTY_MEDIUM, Category.BISTOENG);
         insertQuestion(q49);
         Question q50 = new Question("Binhod",
